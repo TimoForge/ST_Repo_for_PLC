@@ -1,6 +1,6 @@
 # ST语言PLC项目模板
 
-[English](./README_EN.md) | [中文](./README_CN.md)
+[中文](./README_CN.md) | [English](./README_EN.md)
 
 ### 简介
 这是一个基于结构化文本(ST)编程语言的通用PLC(可编程逻辑控制器)项目模板，严格遵循IEC 61131-3标准。本项目专门针对Codesys平台进行优化，提供完整的工业自动化应用开发框架。

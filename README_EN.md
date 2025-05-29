@@ -1,6 +1,6 @@
 # ST Language PLC Project Template
 
-[English](./README_EN.md) | [中文](./README_CN.md)
+[中文](./README_CN.md) | [English](./README_EN.md)
 
 ### Introduction
 This is a universal PLC (Programmable Logic Controller) project template based on Structured Text (ST) programming language, following the IEC 61131-3 standard. The project is optimized for the Codesys platform and provides a comprehensive framework for industrial automation applications.
