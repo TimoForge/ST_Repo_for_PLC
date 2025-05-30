@@ -46,19 +46,19 @@ This is a universal PLC project template based on ST (Structured Text) programmi
 
 ### License / 许可证
 
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
 
-Main rules of GPL-3.0 license / GPL-3.0 许可证的主要规则：
-1. Freedom to Use / 使用自由: You can use this software for any purpose / 您可以出于任何目的使用本软件
-2. Freedom to Share / 分享自由: You can distribute copies of this software / 您可以自由分发本软件副本
-3. Freedom to Study / 学习自由: You can study how the software works and modify it / 您可以学习和修改软件源代码
-4. Freedom to Modify / 修改自由: You can release your improvements to the public / 您可以将改进的版本发布给公众
-5. Copyleft / 相同方式共享: Modified versions must be released under the same license / 修改后的版本必须使用相同的许可证
+Main rules of MPL-2.0 license / MPL-2.0 许可证的主要规则：
+1. Commercial Use / 商业使用: You can use the code commercially / 您可以将代码用于商业用途
+2. Distribution / 分发: You can distribute the code / 您可以分发代码
+3. Modification / 修改: You can modify the code / 您可以修改代码
+4. Patent Use / 专利使用: Contributors grant you patent rights / 贡献者授予您专利权
+5. File-level Copyleft / 文件级共享: Only modified files must keep the license / 仅修改的文件必须保持相同许可证
 
-本项目采用 GNU 通用公共许可证第3版 (GPL-3.0) 开源协议。
+本项目采用 Mozilla 公共许可证 2.0 版 (MPL-2.0) 开源协议。
 
 您可以在以下位置找到完整的许可证文本：
-- [GNU GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html)
+- [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
 - [项目 LICENSE 文件](./LICENSE)
 
 ### Support / 技术支持

@@ -80,22 +80,23 @@ This is a universal PLC (Programmable Logic Controller) project template based o
 Contributions are welcome! Please feel free to submit pull requests.
 
 ### License
-This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
 
-Main rules of GPL-3.0 license:
-1. Freedom to Use: You can use this software for any purpose
-2. Freedom to Share: You can distribute copies of this software
-3. Freedom to Study: You can study how the software works and modify it
-4. Freedom to Modify: You can release your improvements to the public
-5. Copyleft: Modified versions must be released under the same license
+Main rules of MPL-2.0 license:
+1. Commercial Use: You can use the code commercially
+2. Distribution: You can distribute the code
+3. Modification: You can modify the source code
+4. Patent Use: Contributors grant you patent rights
+5. File-level Copyleft: Only modified files must keep the license
 
 This license grants you the following rights:
-- Freedom to Use: You can freely use and modify the software
-- Freedom to Share: You can freely share the software and its modifications
-- Open Source Requirement: If you distribute modified versions of the software, you must release them under the same GPL-3.0 license
+- Commercial Application: Can be used in commercial projects
+- Code Distribution: Free to distribute the source code
+- Patent Rights: Get patent usage rights
+- Limited Scope: Only modified files need to follow the same license
 
 The complete license text can be found at:
-- [GNU GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html)
+- [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
 - [Project LICENSE File](./LICENSE)
 
 ### Contact
