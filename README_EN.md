@@ -22,17 +22,20 @@ This is a universal PLC (Programmable Logic Controller) project template based o
 
 ### Project Structure
 ```
-├── src/
-│   ├── POUs/              # Program Organization Units
-│   │   ├── Programs/      # Main programs
-│   │   ├── Functions/     # Global functions
-│   │   └── FBs/          # Function Blocks
-│   ├── DUTs/              # Data Unit Types
-│   │   ├── Structs/      # Structure definitions
-│   │   └── Enums/        # Enumeration definitions
-│   └── GVLs/             # Global Variable Lists
-├── doc/                   # Documentation
-└── test/                 # Test cases
+📁 project_root/
+├── 📁 src/        # Source code directory
+│   ├── 📁 POUs/   # Program Organization Units
+│   ├── 📁 DUTs/   # Data Unit Types
+│   └── 📁 GVLs/   # Global Variable Lists
+│
+├── 📁 doc/        # Documentation
+│   ├── 📁 configuration/  # Configuration
+│   ├── 📁 function_blocks/ # Function Blocks
+│   └── 📁 overview/      # Project Overview
+│
+└── 📁 test/       # Test cases
+    ├── 📁 unit/   # Unit Tests
+    └── 📁 integration/ # Integration Tests
 ```
 
 ### Getting Started
@@ -58,18 +61,37 @@ This is a universal PLC (Programmable Logic Controller) project template based o
    - Analyze variables using trace and watch lists
 
 ### Coding Standards
+Key Standards Overview:
+
 1. Variable Naming Conventions:
-   - Global variables: "G_" prefix
-   - Input variables: "i_" prefix
-   - Output variables: "o_" prefix
-   - Local variables: "l_" prefix
-2. Function Block Naming:
-   - Use "FB_" prefix
-   - Follow CamelCase naming
-3. Documentation Requirements:
-   - All POUs must include functionality description
-   - Complex algorithms need detailed comments
-   - Variable declarations must include unit specifications
+   - Global variables: `G_` prefix
+   - Input variables: `i_` prefix
+   - Output variables: `o_` prefix
+   - Local variables: `l_` prefix
+   - Static variables: `s_` prefix
+   - Temporary variables: `temp_` prefix
+   - Constants: `C_` prefix
+
+2. POU Naming Conventions:
+   - Function Blocks: `FB_` prefix (e.g., FB_MotorControl)
+   - Functions: `F_` prefix (e.g., F_Calculate)
+   - Programs: `PROG_` prefix (e.g., PROG_Main)
+
+3. Data Type Naming Conventions:
+   - Structures: `ST_` prefix (e.g., ST_MotorConfig)
+   - Enumerations: `E_` prefix (e.g., E_OperationMode)
+
+4. Code Formatting Requirements:
+   - Consistent indentation (4 spaces)
+   - Appropriate use of blank lines between code blocks
+   - Maximum line length of 80 characters
+
+5. Documentation Requirements:
+   - Complete header comments for files
+   - Functionality description for function blocks
+   - Unit specifications in variable declarations
+
+For more detailed standards, including safety guidelines and version control, please refer to the complete [Coding Standards Document](./src/STANDARDS_EN.md).
 
 ### Documentation
 - Detailed documentation can be found in the `doc/` directory

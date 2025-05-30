@@ -5,20 +5,27 @@
 This directory contains all Program Organization Units.
 
 ### Directory Structure
-- `Programs/`: Main Programs
+- `01_Programs/`: Main Programs
   - Contains main application logic
   - Task configuration and program calls
   - System initialization programs
   
-- `Functions/`: Global Functions
+- `02_Functions/`: Global Functions
   - Common mathematical functions
   - Data processing functions
   - Utility functions
   
-- `FBs/`: Function Blocks
+- `03_Function_Blocks/`: Function Blocks
   - Device control function blocks
   - Communication protocol function blocks
   - Algorithm implementation blocks
+
+- `04_ProcessUnits/`: Process Units
+  - Temperature control units
+  - Flow control units
+  - Pressure control units
+  - Level control units
+  - Batch processing units
 
 ### Development Guidelines
 1. Naming Conventions

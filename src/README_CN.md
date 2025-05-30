@@ -10,15 +10,19 @@
 
 ### 目录结构
 - `POUs/`: 程序组织单元
-  - `Programs/`: 主程序文件
-  - `Functions/`: 全局函数
-  - `FBs/`: 功能块
+  - `01_Programs/`: 主程序文件
+  - `02_Functions/`: 全局函数
+  - `03_Function_Blocks/`: 功能块
+  - `04_ProcessUnits/`: 工艺单元
+    - `Batch/`: 批处理相关
+    - `Flow/`: 流量相关
+    - `Level/`: 液位相关
+    - `Pressure/`: 压力相关
+    - `Temperature/`: 温度相关
 - `DUTs/`: 数据单元类型
-  - `Structs/`: 结构体定义
-  - `Enums/`: 枚举定义
 - `GVLs/`: 全局变量列表
 
 ### 开发指南
-1. 所有新的功能块应放在 `POUs/FBs` 目录中
+1. 所有新的功能块应放在 `POUs/03_Function_Blocks` 目录中
 2. 全局变量定义应放在 `GVLs` 目录中
-3. 自定义数据类型应放在 `DUTs` 对应子目录中
+3. 自定义数据类型应放在 `DUTs` 目录中

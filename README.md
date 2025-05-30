@@ -23,15 +23,20 @@ This is a universal PLC project template based on ST (Structured Text) programmi
 ### Main Components / 主要组件
 
 ```
-📁 src/            # Source Code / 源代码
-├── 📁 POUs/       # Program Organization Units / 程序组织单元
-├── 📁 DUTs/       # Data Unit Types / 数据单元类型
-└── 📁 GVLs/       # Global Variable Lists / 全局变量列表
-
-📁 doc/            # Documentation / 文档
-└── 📁 overview/   # Project Overview / 项目概述
-
-📁 test/           # Test Cases / 测试用例
+📁 project_root/   # Project Root / 项目根目录
+├── 📁 src/        # Source Code / 源代码
+│   ├── 📁 POUs/   # Program Organization Units / 程序组织单元
+│   ├── 📁 DUTs/   # Data Unit Types / 数据单元类型
+│   └── 📁 GVLs/   # Global Variable Lists / 全局变量列表
+│
+├── 📁 doc/        # Documentation / 文档
+│   ├── 📁 configuration/  # Configuration / 配置文档
+│   ├── 📁 function_blocks/ # Function Blocks / 功能块文档
+│   └── 📁 overview/      # Project Overview / 项目概述
+│
+└── 📁 test/       # Test Cases / 测试用例
+    ├── 📁 unit/   # Unit Tests / 单元测试
+    └── 📁 integration/ # Integration Tests / 集成测试
 ```
 
 ### Getting Started / 快速开始
