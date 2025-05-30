@@ -1,121 +1,316 @@
-# PLC Project Template Based on ST Language
+# 🏭 PLC Project Template Based on ST Language
 
-[中文](./README_CN.md) | [English](./README_EN.md)
-
-### Introduction
-This is a universal PLC (Programmable Logic Controller) project template based on Structured Text (ST) programming language, following the IEC 61131-3 standard. The project is optimized for the Codesys platform and provides a comprehensive framework for industrial automation applications.
-
-### Development Environment Requirements
-- Codesys V3.5 SP17 or higher
-- Supported Target Systems:
-  - Codesys Control Win V3
-  - Codesys Control RTE
-  - All hardware PLCs supporting Codesys Runtime
-
-### Features
-- Fully compliant with IEC 61131-3 standard
-- Modular program structure
-- Well-documented code
-- Reusable function blocks
-- Standard library support
-- Cross-platform compatibility
-
-### Project Structure
-```
-📁 project_root/
-├── 📁 src/        # Source code directory
-│   ├── 📁 POUs/   # Program Organization Units
-│   ├── 📁 DUTs/   # Data Unit Types
-│   └── 📁 GVLs/   # Global Variable Lists
+<div align="center"```
+📦 project_root
+├── 📂 src                  # Source Code
+│   ├── 🔨 POUs            # Program Organization Units
+│   │   ├── 🎮 Programs    # Main Programs
+│   │   ├── ⚙️ Functions   # Functions
+│   │   └── 🧩 FBs        # Function Blocks
+│   ├── 🔧 DUTs            # Data Unit Types
+│   └── 🌍 GVLs            # Global Variable Lists
 │
-├── 📁 doc/        # Documentation
-│   ├── 📁 configuration/  # Configuration
-│   ├── 📁 function_blocks/ # Function Blocks
-│   └── 📁 overview/      # Project Overview
+├── 📂 doc                  # Documentation
+│   ├── ⚙️ configuration   # Configuration Docs
+│   ├── 📘 manual         # User Manual
+│   └── 🎨 overview       # Project Overview
 │
-└── 📁 test/       # Test cases
-    ├── 📁 unit/   # Unit Tests
-    └── 📁 integration/ # Integration Tests
+└── 🧪 test                # Test Cases
+    ├── 📋 unit           # Unit Tests
+    └── 📊 integration    # Integration Tests
+```s://img.shields.io/badge/简体中文-阅读-blue?style=for-the-badge&logo=markdown)](./README_CN.md)
+[![English](https://img.shields.io/badge/English-Read-blue?style=for-the-badge&logo=markdown)](./README_EN.md)
+
+</div>
+
+## 🌟 Introduction
+
+<div align="center">
+
+**🌐 IEC 61131-3 Compliant | 🎯 ST Language Based | ⭐ Codesys Optimized | 📦 Ready to Use**
+
+</div>
+
+This is a universal PLC (Programmable Logic Controller) project template based on Structured Text (ST) programming language. The project is optimized for the Codesys platform and provides a comprehensive framework with best practices for industrial automation applications.
+
+## ⚙️ Development Environment
+
+<table>
+<tr>
+<td>
+
+### 💻 Runtime Environment
+
+</td>
+<td>
+
+- 🔧 Codesys V3.5 SP17+ 
+- 🌐 Supported Systems:
+  - ⭐ Codesys Control Win V3
+  - 🔌 Codesys Control RTE
+  - 🎯 All Hardware PLCs with Codesys Runtime
+- 💾 Recommended 4GB+ RAM
+- 🖥️ Recommended 1920x1080 Resolution
+
+</td>
+</tr>
+</table>
+
+## ✨ Key Features
+
+<table>
+<tr>
+<td>
+
+### 🔰 Standards
+- ✅ IEC 61131-3 Compliant
+- 📚 Well-Documented Code
+- 🏗️ Modular Architecture
+- 📋 Standardized Structure
+
+</td>
+<td>
+
+### 🛠️ Technical Features
+- 🔄 Reusable Function Blocks
+- 🌐 Cross-Platform Support
+- 🧪 Complete Test Framework
+- 📊 Process Control Modules
+
+</td>
+</tr>
+</table>
+
+## 🗂️ Project Structure
+
+```
+📦 project_root
+├── 📂 src                  # Source Code
+│   ├── 🔨 POUs            # Program Organization Units
+│   │   ├── 🎮 Programs    # Main Programs
+│   │   ├── ⚙️ Functions   # Functions
+│   │   └── 🧩 FBs        # Function Blocks
+│   ├── 🔧 DUTs            # Data Unit Types
+│   └── 🌍 GVLs            # Global Variable Lists
+│
+├── 📂 doc                  # Documentation
+│   ├── ⚙️ configuration   # Configuration Docs
+│   ├── 📘 manual         # User Manual 
+│   └── 🎨 overview       # Project Overview
+│
+└── 🧪 test                # Test Cases
+    ├── 📋 unit           # Unit Tests
+    └── 📊 integration    # Integration Tests
 ```
 
-### Getting Started
-1. Clone this repository
-2. Open the project file (.project) with Codesys V3.5
-3. Configure Target Device:
-   - Select appropriate device description file
-   - Configure communication parameters (e.g., Ethernet IP)
-   - Set PLC boot behavior
-4. Library Management:
-   - Verify required libraries are included
-   - Add additional Codesys standard libraries as needed
-5. Program Development:
-   - Create new POUs using provided templates
-   - Follow project structure guidelines
-6. Compilation and Download:
-   - Build the entire project
-   - Check program consistency
-   - Download to target device
-7. Online Debugging:
-   - Use Codesys online monitoring features
-   - Debug with breakpoints and single-step execution
-   - Analyze variables using trace and watch lists
+## 🚀 Getting Started
 
-### Coding Standards
-Key Standards Overview:
+### Configuration Steps
 
-1. Variable Naming Conventions:
-   - Global variables: `G_` prefix
-   - Input variables: `i_` prefix
-   - Output variables: `o_` prefix
-   - Local variables: `l_` prefix
-   - Static variables: `s_` prefix
-   - Temporary variables: `temp_` prefix
-   - Constants: `C_` prefix
+1. 📥 Clone Repository
+   ```bash
+   git clone https://github.com/your-username/plc-project-template.git
+   ```
 
-2. POU Naming Conventions:
-   - Function Blocks: `FB_` prefix (e.g., FB_MotorControl)
-   - Functions: `F_` prefix (e.g., F_Calculate)
-   - Programs: `PROG_` prefix (e.g., PROG_Main)
+2. 🛠️ Open with Codesys
 
-3. Data Type Naming Conventions:
-   - Structures: `ST_` prefix (e.g., ST_MotorConfig)
-   - Enumerations: `E_` prefix (e.g., E_OperationMode)
+3. ⚙️ Configure Target Device:
+   - 📋 Select Device Profile
+   - 🌐 Configure Network
+   - 🔄 Set Boot Behavior
 
-4. Code Formatting Requirements:
-   - Consistent indentation (4 spaces)
-   - Appropriate use of blank lines between code blocks
-   - Maximum line length of 80 characters
+4. 📚 Library Management:
+   - ✅ Verify Base Libraries
+   - ➕ Add Extra Libraries
 
-5. Documentation Requirements:
-   - Complete header comments for files
-   - Functionality description for function blocks
-   - Unit specifications in variable declarations
+5. 💻 Development:
+   - 📝 Use POU Templates
+   - 📐 Follow Standards
 
-For more detailed standards, including safety guidelines and version control, please refer to the complete [Coding Standards Document](./src/STANDARDS_EN.md).
+6. 🔨 Build & Deploy:
+   - 🏗️ Build Project
+   - 🔍 Check Consistency
+   - ⬇️ Download Program
 
-### Documentation
-- Detailed documentation can be found in the `doc/` directory
-- Each function block and program is documented with its purpose and parameters
-- Variables are named according to industry standards
+7. 🔬 Debug:
+   - 👀 Live Monitoring
+   - 🔎 Breakpoint Debug
+   - 📊 Variable Tracking
 
-### Contributing
-Contributions are welcome! Please feel free to submit pull requests.
+## 📝 Coding Standards
 
-### License
-This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
+<table>
+<tr>
+<td>
 
-Main rules of MPL-2.0 license:
-1. Commercial Use: You can use the code commercially
-2. Distribution: You can distribute the code
-3. Modification: You can modify the source code
-4. Patent Use: Contributors grant you patent rights
-5. File-level Copyleft: Only modified files must keep the license
+### 🏷️ Naming Rules
 
-This license grants you the following rights:
-- Commercial Application: Can be used in commercial projects
-- Code Distribution: Free to distribute the source code
-- Patent Rights: Get patent usage rights
-- Limited Scope: Only modified files need to follow the same license
+**Variables**
+- 📌 Global: `G_`
+- 📥 Input: `i_`
+- 📤 Output: `o_`
+- 🔷 Local: `l_`
+- 📊 Static: `s_`
+- ⏳ Temp: `temp_`
+- 🔒 Constants: `C_`
+
+**POU Naming**
+- 🧩 Function Blocks: `FB_`
+- ⚙️ Functions: `F_`
+- 🎯 Programs: `PROG_`
+
+**Data Types**
+- 📋 Structures: `ST_`
+- 🔄 Enums: `E_`
+
+</td>
+<td>
+
+### 📐 Format Standards
+
+**Code Format**
+- ➡️ Unified Indentation (4 spaces)
+- ⬇️ Reasonable Line Breaks
+- ↔️ Max 80 Characters per Line
+
+**Comments**
+- 📄 Complete File Headers
+- 📚 Function Block Description
+- 📊 Variable Unit Declaration
+
+**Best Practices**
+- ✨ Clear Code Structure
+- 🔍 Easy to Read and Maintain
+- 🎯 Clear Functionality
+- ♻️ Code Reusability
+
+</td>
+
+</td>
+</tr>
+</table>
+
+📖 For complete standards and guidelines, see [Coding Standards Document](./src/STANDARDS_EN.md)
+
+## 📚 Documentation
+
+<table>
+<tr>
+<td>
+
+### 📂 Structure
+- 📖 Detailed docs in `doc/` directory
+- 🔍 API documentation
+- 📊 Test reports
+- 🎯 Usage examples
+
+</td>
+<td>
+
+### 📝 Contents
+- 🏗️ System Architecture
+- ⚙️ Configuration Guide
+- 💻 Programming Manual
+- 🧪 Testing Guidelines
+
+</td>
+</tr>
+</table>
+
+### 📁 Documentation Map
+
+```
+📂 doc/
+├── 📘 configuration/     # Setup & Config Guide
+├── ⚙️ function_blocks/   # FB Documentation
+├── 📖 manual/           # User Manual
+├── 🎨 overview/         # Project Overview
+└── 📊 test_reports/     # Test Results
+```
+
+## 🤝 Contributing
+
+<table>
+<tr>
+<td>
+
+### 🌟 How to Contribute
+1. 🔍 Fork the repository
+2. 🌿 Create feature branch
+3. ✨ Make improvements
+4. 📝 Submit pull request
+
+</td>
+<td>
+
+### 📋 Guidelines
+- 📌 Follow coding standards
+- ✅ Add tests for new features
+- 📚 Update documentation
+- 🔄 Keep commits clean
+
+</td>
+</tr>
+</table>
+
+## 📄 License
+
+<div align="center">
+
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://www.mozilla.org/en-US/MPL/2.0/)
+
+</div>
+
+### ⚖️ What You Can and Cannot Do
+
+<table>
+<tr>
+<td>
+
+### ✅ Allowed
+- 💼 Commercial Use
+- 🔄 Share & Distribute
+- ✏️ Modify Code
+- 📜 Use Patents
+- 🌍 Private Use
+
+</td>
+<td>
+
+### ❌ Not Allowed
+- 🚫 Remove License
+- ⛔️ Change License
+- ❎ Hold Authors Liable
+- 🈲 Use Trademarks
+
+</td>
+</tr>
+</table>
+
+### 🎯 Key Points
+
+<table>
+<tr>
+<td>
+
+### 🔑 Rights
+- 🏢 Use in Business
+- 🌐 Share Freely
+- 🛠️ Make Changes
+- 💡 Patent Rights
+
+</td>
+<td>
+
+### 📌 Obligations
+- 📝 Keep Notices
+- 🔗 Share Source
+- ⚖️ Same License
+- 📋 State Changes
+
+</td>
+</tr>
+</table>
 
 The complete license text can be found at:
 - [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
@@ -123,3 +318,34 @@ The complete license text can be found at:
 
 ### Contact
 Please create an issue if you have any questions or suggestions.
+
+## 💡 Support & Feedback
+
+<table>
+<tr>
+<td>
+
+### 🤔 Need Help?
+- 📝 Create an issue
+- 💬 Join discussions 
+- 📧 Contact maintainers
+- 📚 Check wiki pages
+
+</td>
+<td>
+
+### 🎯 Quick Links
+- [📋 Issue Tracker](../../../issues)
+- [💭 Discussions](../../../discussions)
+- [📖 Wiki](../../../wiki)
+- [📊 Release Notes](../../../releases)
+
+</td>
+</tr>
+</table>
+
+<div align="center">
+
+⭐️ **If this project helped you, please consider giving it a star!** ⭐️
+
+</div>

@@ -1,72 +1,149 @@
-# PLC Project Template Based on ST Language / 基于ST语言的PLC项目模板
+# 🏭 PLC Project Template Based on ST Language / 基于ST语言的PLC项目模板
 
-Welcome to the IEC 61131-3 compliant PLC project template! / 欢迎使用符合IEC 61131-3标准的PLC项目模板！
+<div align="center">
 
-## Language Selection / 语言选择
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](./LICENSE)
+[![IEC 61131-3](https://img.shields.io/badge/IEC-61131--3-blue.svg)](https://webstore.iec.ch/publication/4552)
+[![Codesys](https://img.shields.io/badge/Codesys-V3.5-orange.svg)](https://www.codesys.com/)
+[![Documentation](https://img.shields.io/badge/docs-bilingual-green.svg)](./doc)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 
-- [English](./README_EN.md)
-- [中文](./README_CN.md)
+[English](./README_EN.md) | [中文](./README_CN.md)
 
-## Quick Overview / 快速预览
+</div>
 
-This is a universal PLC project template based on ST (Structured Text) programming language, optimized for Codesys V3.5 platform.
+## 🌟 Quick Overview / 快速预览
 
-这是一个基于ST（结构化文本）编程语言的通用PLC项目模板，针对Codesys V3.5平台优化。
+This is a professional PLC project template based on ST (Structured Text) programming language, optimized for Codesys V3.5 platform, following IEC 61131-3 standards.
 
-### Key Features / 主要特点
+这是一个基于ST（结构化文本）编程语言的专业PLC项目模板，针对Codesys V3.5平台优化，遵循IEC 61131-3标准。
 
-- IEC 61131-3 Standard Compliant / 符合IEC 61131-3标准
-- Bilingual Documentation / 双语文档支持
-- Modular Architecture / 模块化架构
-- Complete Project Structure / 完整的项目结构
+## ✨ Key Features / 主要特点
 
-### Main Components / 主要组件
+<table>
+<tr>
+<td>
+
+### 🔰 标准规范
+- ✅ 符合IEC 61131-3标准
+- 📚 双语文档支持
+- 🏗️ 模块化架构设计
+- 📋 完整的项目结构
+
+</td>
+<td>
+
+### 🛠️ 技术特性
+- 🔄 标准功能块库
+- 🌐 全局变量管理
+- 🧪 完整测试框架
+- 📊 过程控制模块
+
+</td>
+</tr>
+</table>
+
+## 🗂️ Project Structure / 项目结构
 
 ```
-📁 project_root/   # Project Root / 项目根目录
-├── 📁 src/        # Source Code / 源代码
-│   ├── 📁 POUs/   # Program Organization Units / 程序组织单元
-│   ├── 📁 DUTs/   # Data Unit Types / 数据单元类型
-│   └── 📁 GVLs/   # Global Variable Lists / 全局变量列表
+📦 project_root
+├── 📂 src                  # Source Code / 源代码
+│   ├── 🔨 POUs            # Program Organization Units / 程序组织单元
+│   │   ├── 🎮 Programs    # Main Programs / 主程序
+│   │   ├── ⚙️ Functions   # Functions / 功能函数
+│   │   └── 🧩 FBs        # Function Blocks / 功能块
+│   ├── 🔧 DUTs            # Data Unit Types / 数据单元类型
+│   └── 🌍 GVLs            # Global Variable Lists / 全局变量列表
 │
-├── 📁 doc/        # Documentation / 文档
-│   ├── 📁 configuration/  # Configuration / 配置文档
-│   ├── 📁 function_blocks/ # Function Blocks / 功能块文档
-│   └── 📁 overview/      # Project Overview / 项目概述
+├── 📂 doc                  # Documentation / 文档
+│   ├── ⚙️ configuration   # Configuration / 配置文档
+│   ├── 📘 manual         # User Manual / 用户手册
+│   └── 🎨 overview       # Project Overview / 项目概述
 │
-└── 📁 test/       # Test Cases / 测试用例
-    ├── 📁 unit/   # Unit Tests / 单元测试
-    └── 📁 integration/ # Integration Tests / 集成测试
+└── 🧪 test                # Test Cases / 测试用例
+    ├── 📋 unit           # Unit Tests / 单元测试
+    └── 📊 integration    # Integration Tests / 集成测试
 ```
 
-### Getting Started / 快速开始
+<details>
+<summary>📚 查看完整的项目结构</summary>
 
-1. Select your preferred language above / 在上方选择您偏好的语言
-2. Follow the detailed guide in the corresponding README / 按照相应语言的README进行操作
+[详细目录结构](./PROJECT_DIRECTORY_TREE.md)
 
-### Requirements / 环境要求
+</details>
 
-- Codesys V3.5 SP17 or higher / Codesys V3.5 SP17或更高版本
-- Compatible with all Codesys Runtime systems / 兼容所有Codesys Runtime系统
+## 🚀 Getting Started / 快速开始
 
-### License / 许可证
+### 环境要求
 
-This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
+<table>
+<tr>
+<td>
 
-Main rules of MPL-2.0 license / MPL-2.0 许可证的主要规则：
-1. Commercial Use / 商业使用: You can use the code commercially / 您可以将代码用于商业用途
-2. Distribution / 分发: You can distribute the code / 您可以分发代码
-3. Modification / 修改: You can modify the code / 您可以修改代码
-4. Patent Use / 专利使用: Contributors grant you patent rights / 贡献者授予您专利权
-5. File-level Copyleft / 文件级共享: Only modified files must keep the license / 仅修改的文件必须保持相同许可证
+### 💻 运行环境
 
-本项目采用 Mozilla 公共许可证 2.0 版 (MPL-2.0) 开源协议。
+</td>
+<td>
 
-您可以在以下位置找到完整的许可证文本：
-- [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
-- [项目 LICENSE 文件](./LICENSE)
+- 🔧 Codesys V3.5 SP17+ 
+- 🌐 兼容所有Codesys Runtime系统
+- 💾 推荐 4GB+ RAM
+- 🖥️ 推荐 1920x1080 分辨率
 
-### Support / 技术支持
+</td>
+</tr>
+</table>
 
-Please create an issue if you have any questions.
-如有任何问题，请创建issue。
+### 快速使用
+
+1. 克隆项目模板
+   ```bash
+   git clone https://github.com/your-username/plc-project-template.git
+   ```
+
+2. 使用Codesys打开项目
+
+3. 按照选择的语言文档进行配置：
+   - [English Guide](./README_EN.md)
+   - [中文指南](./README_CN.md)
+
+## 📄 License / 许可证
+
+<table>
+<tr>
+<td>
+<img src="https://www.mozilla.org/media/protocol/img/logos/mozilla/logo-word-hor.e20791bb4dd4.svg" height="40">
+</td>
+<td>
+
+本项目采用 [Mozilla Public License 2.0](./LICENSE) 开源协议。
+
+主要规则：
+- ✅ 可以商业使用
+- ✅ 可以修改源码
+- ✅ 可以闭源分发
+- ℹ️ 修改的文件需要保持相同许可证
+- ℹ️ 需要说明源项目出处
+
+</td>
+</tr>
+</table>
+
+## 🤝 Contributing / 贡献
+
+欢迎贡献代码和改进项目！请查看我们的[贡献指南](./CONTRIBUTING.md)。
+
+## 💬 Support / 技术支持
+
+如果您有任何问题或建议：
+- 📮 提交 [Issue](../../issues)
+- 💭 查看 [讨论区](../../discussions)
+- 📑 查阅 [文档](./doc)
+
+<div align="center">
+
+---
+
+**PLC Project Template** ©2025 Made with ❤️ for the PLC Community
+
+</div>
