@@ -1,4 +1,4 @@
-# ST Language PLC Project Template
+# PLC Project Template Based on ST Language
 
 [中文](./README_CN.md) | [English](./README_EN.md)
 

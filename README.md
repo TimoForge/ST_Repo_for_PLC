@@ -1,4 +1,4 @@
-# ST Language PLC Project Template / ST语言PLC项目模板
+# PLC Project Template Based on ST Language / 基于ST语言的PLC项目模板
 
 Welcome to the IEC 61131-3 compliant PLC project template! / 欢迎使用符合IEC 61131-3标准的PLC项目模板！
 

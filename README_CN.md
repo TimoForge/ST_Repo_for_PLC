@@ -1,4 +1,4 @@
-# ST语言PLC项目模板
+# 基于ST语言的PLC项目模板
 
 [中文](./README_CN.md) | [English](./README_EN.md)
 
