@@ -1,25 +1,9 @@
 # 🏭 PLC Project Template Based on ST Language
 
-<div align="center"```
-📦 project_root
-├── 📂 src                  # Source Code
-│   ├── 🔨 POUs            # Program Organization Units
-│   │   ├── 🎮 Programs    # Main Programs
-│   │   ├── ⚙️ Functions   # Functions
-│   │   └── 🧩 FBs        # Function Blocks
-│   ├── 🔧 DUTs            # Data Unit Types
-│   └── 🌍 GVLs            # Global Variable Lists
-│
-├── 📂 doc                  # Documentation
-│   ├── ⚙️ configuration   # Configuration Docs
-│   ├── 📘 manual         # User Manual
-│   └── 🎨 overview       # Project Overview
-│
-└── 🧪 test                # Test Cases
-    ├── 📋 unit           # Unit Tests
-    └── 📊 integration    # Integration Tests
-```s://img.shields.io/badge/简体中文-阅读-blue?style=for-the-badge&logo=markdown)](./README_CN.md)
+<div align="center">
+
 [![English](https://img.shields.io/badge/English-Read-blue?style=for-the-badge&logo=markdown)](./README_EN.md)
+[![简体中文](https://img.shields.io/badge/简体中文-阅读-blue?style=for-the-badge&logo=markdown)](./README_CN.md)
 
 </div>
 
@@ -185,8 +169,6 @@ This is a universal PLC (Programmable Logic Controller) project template based o
 - ♻️ Code Reusability
 
 </td>
-
-</td>
 </tr>
 </table>
 
@@ -315,9 +297,6 @@ This is a universal PLC (Programmable Logic Controller) project template based o
 The complete license text can be found at:
 - [Mozilla Public License 2.0](https://www.mozilla.org/en-US/MPL/2.0/)
 - [Project LICENSE File](./LICENSE)
-
-### Contact
-Please create an issue if you have any questions or suggestions.
 
 ## 💡 Support & Feedback
 
