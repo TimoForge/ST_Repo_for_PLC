@@ -80,7 +80,23 @@ This is a universal PLC (Programmable Logic Controller) project template based o
 Contributions are welcome! Please feel free to submit pull requests.
 
 ### License
-MIT License
+This project is licensed under the GNU General Public License v3.0 (GPL-3.0).
+
+Main rules of GPL-3.0 license:
+1. Freedom to Use: You can use this software for any purpose
+2. Freedom to Share: You can distribute copies of this software
+3. Freedom to Study: You can study how the software works and modify it
+4. Freedom to Modify: You can release your improvements to the public
+5. Copyleft: Modified versions must be released under the same license
+
+This license grants you the following rights:
+- Freedom to Use: You can freely use and modify the software
+- Freedom to Share: You can freely share the software and its modifications
+- Open Source Requirement: If you distribute modified versions of the software, you must release them under the same GPL-3.0 license
+
+The complete license text can be found at:
+- [GNU GPL-3.0 License](https://www.gnu.org/licenses/gpl-3.0.html)
+- [Project LICENSE File](./LICENSE)
 
 ### Contact
 Please create an issue if you have any questions or suggestions.
