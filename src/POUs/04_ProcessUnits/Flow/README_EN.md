@@ -1,28 +1,24 @@
-# Flow Control Unit
+# 💧 Flow Control Unit
 
-This directory contains flow control POUs, strictly following PO_ prefix naming convention.
+<div align="center>
+<!-- ...language switcher... -->
+</div>
 
-## PO_ Prefix Usage
+## 📑 Description
+This directory contains flow control related function blocks and programs.
 
-### Flow Programs
-- PO_FlowControl: Main control program
-- PO_FlowRatio: Flow ratio control
-- PO_FlowTotalizer: Flow totalization
+## 📂 Components
+### 🎯 Basic Control
+- 🌊 `PO_FLOW_FB_PID` - Flow PID Controller
+- 📈 `PO_FLOW_FB_Ratio` - Flow Ratio Control
+- 🔄 `PO_FLOW_PROG_Batch` - Batch Control Program
 
-### Flow Function Blocks
-- PO_FB_FlowPID: PID control function block
-- PO_FB_FlowLimit: Flow limit function block
-- PO_FB_FlowAlarm: Flow alarm function block
+### 📊 Flow Calculation
+- 🔍 `PO_FLOW_FUN_Comp` - Flow Compensation
+- 📊 `PO_FLOW_PROG_Total` - Flow Totalization
+- ⚡ `PO_FLOW_FB_Monitor` - Flow Monitoring
 
-### Flow Functions
-- PO_F_FlowConvert: Flow unit conversion
-- PO_F_FlowCompensate: Flow compensation
-- PO_F_FlowValidate: Flow validation
-
-## Development Standards
-
-1. All flow POUs must use PO_ prefix
-2. Names should clearly indicate flow control function
-3. Maintain consistent naming style
-4. Provide complete interface documentation
-5. Include temperature/pressure compensation parameters
+### ⚙️ Process Functions
+- 🎛️ `PO_FLOW_FB_Mix` - Mixing Control
+- 🔄 `PO_FLOW_FB_Valve` - Valve Control
+- 📈 `PO_FLOW_PROG_Curve` - Curve Control Program

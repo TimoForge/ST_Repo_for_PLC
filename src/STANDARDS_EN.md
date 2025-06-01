@@ -4,128 +4,121 @@
 
 ## IEC 61131-3 Programming Standards
 
-### 1. General Naming Conventions
-- All identifiers must be in English
-- Avoid special characters
-- Length should be between 2-32 characters
-- Use meaningful descriptive names
+<div align="center">
+<div style="margin: 20px 0; display: flex; justify-content: center; gap: 24px;">
+<a href="./STANDARDS_EN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #0366d6, #044289); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+English
+</a>
+<a href="./STANDARDS_CN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #28a745, #208637); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+中文
+</a>
+</div>
+</div>
 
-### 2. Variable Naming Conventions
+## 📑 Basic Principles
+- Follow IEC 61131-3 standard specifications
+- Use English identifiers
+- Maintain code consistency and readability
+- Complete documentation and comments
+- Focus on safety and maintainability
 
-#### 2.1 Prefix Rules
-- Global variables: G_
-- Input variables: i_
-- Output variables: o_
-- Local variables: l_
-- Static variables: s_
-- Temporary variables: temp_
-- Constants: C_
+## 🔠 Naming Conventions
 
-#### 2.2 Data Type Suffixes
-- BOOL: _b (example: Start_b)
-- INT: _i (example: Counter_i)
-- REAL: _r (example: Temperature_r)
-- WORD: _w (example: Status_w)
-- STRING: _str (example: Name_str)
-- ARRAY: _arr (example: Data_arr)
-- STRUCT: _st (example: Config_st)
-- ENUM: _e (example: Mode_e)
+### 1️⃣ POU Naming Conventions
+#### Standard POU
+- Program: `PROG_[Function]`
+  - Example: `PROG_Main`, `PROG_Init`
+- Function Block: `FB_[Type]_[Function]`
+  - Example: `FB_CTRL_PID`, `FB_COMM_Modbus`
+- Function: `F_[Function]`
+  - Example: `F_ScaleValue`, `F_ConvertUnit`
 
-### 3. POU Naming Conventions
+#### Process Unit
+- Process Program: `PO_[Process]_PROG_[Function]`
+  - Example: `PO_TEMP_PROG_Control`
+- Process Function Block: `PO_[Process]_FB_[Function]`
+  - Example: `PO_FLOW_FB_PID`
+- Process Function: `PO_[Process]_FUN_[Function]`
+  - Example: `PO_PRES_FUN_Calc`
 
-#### 3.1 Function Blocks (FB)
-- Prefix: FB_
-- Example: FB_MotorControl, FB_PIDController
+### 2️⃣ Variable Naming Conventions
+#### Scope Prefixes
+- Global Variables: `G_[TypeSuffix]_[Name]`
+- Input Variables: `i_[TypeSuffix]_[Name]`
+- Output Variables: `o_[TypeSuffix]_[Name]`
+- Local Variables: `l_[TypeSuffix]_[Name]`
+- Static Variables: `s_[TypeSuffix]_[Name]`
+- Temporary Variables: `tmp_[TypeSuffix]_[Name]`
+- Constants: `C_[TypeSuffix]_[Name]`
 
-#### 3.2 Functions (FUN)
-- Prefix: F_
-- Example: F_Calculate, F_Convert
+#### Data Type Suffixes
+- BOOL: `_b` (e.g., Start_b)
+- INT: `_i` (e.g., Count_i)
+- REAL: `_r` (e.g., Temp_r)
+- WORD: `_w` (e.g., Status_w)
+- STRING: `_s` (e.g., Name_s)
+- ARRAY: `_a` (e.g., Data_a)
+- STRUCT: `_st` (e.g., Config_st)
+- ENUM: `_e` (e.g., Mode_e)
 
-#### 3.3 Programs (PROG)
-- Prefix: PROG_
-- Example: PROG_Main, PROG_Init
+### 3️⃣ Data Type Definitions
+- Structures: `ST_[Function]_[Type]`
+- Enumerations: `E_[Function]_[Type]`
 
-### 4. Data Type Naming Conventions
+## 📝 Comment Standards
 
-#### 4.1 Structures
-- Prefix: ST_
-- Example: ST_MotorConfig, ST_AlarmData
-
-#### 4.2 Enumerations
-- Prefix: E_
-- Example: E_OperationMode, E_ErrorCode
-
-### 5. Documentation Standards
-
-#### 5.1 File Header Comments
+### File Header Comments
 ```st
 (*
-    Project Name:
-    File Name:
-    Description:
-    Author:
-    Creation Date:
-    Modification History:
-    Version:
+    Project: <ProjectName>
+    File: <FileName>
+    Description: <FunctionDescription>
+    Author: <Author>
+    Date: <YYYY-MM-DD>
+    Version: <Vx.y.z>
+    History:
+    - <YYYY-MM-DD> <Author> <ChangeDescription>
 *)
 ```
 
-#### 5.2 Function Block Comments
+### Function Block Comments
 ```st
 (*
-    Function Block Name:
-    Description:
-    Input Parameters:
-    Output Parameters:
-    Creation Date:
-    Modification History:
+    Name: <FunctionBlockName>
+    Description: <Description>
+    Inputs:
+    - <ParamName>: <Type> <Description>
+    Outputs:
+    - <ParamName>: <Type> <Description>
+    History:
+    - <YYYY-MM-DD> <ChangeDescription>
 *)
 ```
 
-#### 5.3 Variable Comments
-```st
-// Variable Name : Data Type // Unit - Description
-Speed_r : REAL; // m/s - Actual motor speed
+## ⚙️ Project Structure
+```
+src/
+├─ POUs/                 // Program Organization Units
+│  ├─ Programs/         // Main Programs
+│  ├─ Functions/        // Functions
+│  ├─ FBs/             // Function Blocks
+│  └─ ProcessUnits/     // Process Units
+├─ DUTs/               // Data Unit Types
+└─ GVLs/              // Global Variable Lists
 ```
 
-### 6. Code Formatting Standards
+## 🛡️ Code Quality Requirements
 
-#### 6.1 Indentation
-- Use 4 spaces or 1 tab
-- Maintain consistent indentation style
+### Safety
+- All variables must be initialized
+- Safety checks for critical operations
+- Error handling mechanisms
+- Avoid using pointers
+- Add timeout protection
 
-#### 6.2 Blank Lines
-- One blank line between function blocks
-- One blank line between related code segments
-- Avoid multiple consecutive blank lines
-
-#### 6.3 Line Width
-- Maximum 80 characters per line
-- Break long expressions appropriately
-
-### 7. Safety Guidelines
-
-#### 7.1 Variable Initialization
-- All variables must be explicitly initialized
-- Avoid using unchecked input values
-
-#### 7.2 Error Handling
-- Implement error detection and handling mechanisms
-- Include timeout handling for critical operations
-
-#### 7.3 Important Notes
-- Avoid using POINTER
-- Use RETAIN variables cautiously
-- Check array boundaries
-- Prevent division by zero errors
-
-### 8. Version Control
-
-#### 8.1 Version Number Format
-- Major.Minor.Revision
-- Example: v1.2.3
-
-#### 8.2 Documentation Requirements
-- Add modification notes for each change
-- Record modification date and author
-- Document reason for change and impact scope
+### Maintainability
+- Follow code review checklist
+- Execute unit tests
+- Regular code reviews
+- Consistent code formatting
+- Version control management

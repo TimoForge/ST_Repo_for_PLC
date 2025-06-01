@@ -1,131 +1,120 @@
-# Coding Standards / 编程规范
+# 📋 IEC 61131-3 编程规范
 
-[English](./STANDARDS_EN.md) | [中文](./STANDARDS_CN.md)
+<div align="center">
+<div style="margin: 20px 0; display: flex; justify-content: center; gap: 24px;">
+<a href="./STANDARDS_EN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #0366d6, #044289); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+English
+</a>
+<a href="./STANDARDS_CN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #28a745, #208637); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+中文
+</a>
+</div>
+</div>
 
-## IEC 61131-3 编程规范
+## 📑 基本原则
+- 遵循IEC 61131-3标准规范
+- 使用英文命名标识符
+- 保持代码一致性和可读性
+- 完整的文档和注释
+- 注重安全性和可维护性
 
-### 1. 通用命名规范
-- 所有标识符必须使用英文
-- 避免使用特殊字符
-- 长度控制在2-32个字符之间
-- 使用有意义的描述性名称
+## 🔠 命名规范
 
-### 2. 变量命名规范
+### 1️⃣ POU命名规范
+#### 标准POU
+- 程序: `PROG_[功能]`
+  - 示例: `PROG_Main`, `PROG_Init`
+- 功能块: `FB_[类型]_[功能]`
+  - 示例: `FB_CTRL_PID`, `FB_COMM_Modbus`
+- 函数: `F_[功能]`
+  - 示例: `F_ScaleValue`, `F_ConvertUnit`
 
-#### 2.1 前缀规则
-- 全局变量：G_
-- 输入变量：i_
-- 输出变量：o_
-- 局部变量：l_
-- 静态变量：s_
-- 临时变量：temp_
-- 常量：C_
+#### 工艺单元
+- 工艺程序: `PO_[工艺]_PROG_[功能]`
+  - 示例: `PO_TEMP_PROG_Control`
+- 工艺功能块: `PO_[工艺]_FB_[功能]`
+  - 示例: `PO_FLOW_FB_PID`
+- 工艺函数: `PO_[工艺]_FUN_[功能]`
+  - 示例: `PO_PRES_FUN_Calc`
 
-#### 2.2 数据类型后缀
-- BOOL: _b (example: Start_b)
-- INT: _i (example: Counter_i)
-- REAL: _r (example: Temperature_r)
-- WORD: _w (example: Status_w)
-- STRING: _str (example: Name_str)
-- ARRAY: _arr (example: Data_arr)
-- STRUCT: _st (example: Config_st)
-- ENUM: _e (example: Mode_e)
+### 2️⃣ 变量命名规范
+#### 范围前缀
+- 全局变量: `G_[类型后缀]_[名称]`
+- 输入变量: `i_[类型后缀]_[名称]`
+- 输出变量: `o_[类型后缀]_[名称]`
+- 局部变量: `l_[类型后缀]_[名称]`
+- 静态变量: `s_[类型后缀]_[名称]`
+- 临时变量: `tmp_[类型后缀]_[名称]`
+- 常量: `C_[类型后缀]_[名称]`
 
-### 3. POU命名规范
+#### 数据类型后缀
+- BOOL: `_b` (例: Start_b)
+- INT: `_i` (例: Count_i)
+- REAL: `_r` (例: Temp_r)
+- WORD: `_w` (例: Status_w)
+- STRING: `_s` (例: Name_s)
+- ARRAY: `_a` (例: Data_a)
+- STRUCT: `_st` (例: Config_st)
+- ENUM: `_e` (例: Mode_e)
 
-#### 3.1 功能块(FB)
-- 前缀：FB_
-- 示例：FB_MotorControl, FB_PIDController
+### 3️⃣ 数据类型定义
+- 结构体: `ST_[功能]_[类型]`
+- 枚举: `E_[功能]_[类型]`
 
-#### 3.2 函数(FUN)
-- 前缀：F_
-- 示例：F_Calculate, F_Convert
+## 📝 注释规范
 
-#### 3.3 程序(PROG)
-- 前缀：PROG_
-- 示例：PROG_Main, PROG_Init
-
-### 4. 数据类型命名规范
-
-#### 4.1 结构体
-- 前缀：ST_
-- 示例：ST_MotorConfig, ST_AlarmData
-
-#### 4.2 枚举
-- 前缀：E_
-- 示例：E_OperationMode, E_ErrorCode
-
-### 5. 注释规范
-
-#### 5.1 文件头注释
+### 文件头注释
 ```st
 (*
-    项目名称：
-    文件名称：
-    功能描述：
-    作者：
-    创建日期：
-    修改记录：
-    版本：
+    Project: <项目名称>
+    File: <文件名>
+    Description: <功能描述>
+    Author: <作者>
+    Date: <YYYY-MM-DD>
+    Version: <Vx.y.z>
+    History:
+    - <YYYY-MM-DD> <作者> <修改说明>
 *)
 ```
 
-#### 5.2 功能块注释
+### 功能块注释
 ```st
 (*
-    功能块名称：
-    功能描述：
-    输入参数：
-    输出参数：
-    创建日期：
-    修改记录：
+    Name: <功能块名>
+    Description: <功能描述>
+    Inputs:
+    - <参数名>: <类型> <说明>
+    Outputs:
+    - <参数名>: <类型> <说明>
+    History:
+    - <YYYY-MM-DD> <修改说明>
 *)
 ```
 
-#### 5.3 变量注释
-```st
-// 变量名 : 数据类型 // 单位 - 描述
-Speed_r : REAL; // m/s - 电机实际速度
+## ⚙️ 项目结构
+```
+src/
+├─ POUs/                 // 程序组织单元
+│  ├─ Programs/         // 主程序
+│  ├─ Functions/        // 功能函数
+│  ├─ FBs/             // 功能块
+│  └─ ProcessUnits/     // 工艺单元
+├─ DUTs/               // 数据类型
+└─ GVLs/              // 全局变量
 ```
 
-### 6. 代码格式规范
+## 🛡️ 代码质量要求
 
-#### 6.1 缩进
-- 使用4个空格或1个制表符
-- 保持一致的缩进风格
+### 安全性
+- 所有变量必须初始化
+- 关键操作需要安全检查
+- 实现错误处理机制
+- 避免使用指针
+- 添加超时保护
 
-#### 6.2 空行
-- 不同功能块之间空一行
-- 相关代码段之间空一行
-- 避免过多连续空行
-
-#### 6.3 行宽
-- 每行代码不超过80字符
-- 长表达式适当换行
-
-### 7. 安全规范
-
-#### 7.1 变量初始化
-- 所有变量必须显式初始化
-- 避免使用未经检查的输入值
-
-#### 7.2 错误处理
-- 实现错误检测和处理机制
-- 关键操作需要有超时处理
-
-#### 7.3 注意事项
-- 避免使用POINTER
-- 谨慎使用RETAIN变量
-- 对数组边界进行检查
-- 避免除零错误
-
-### 8. 版本控制
-
-#### 8.1 版本号格式
-- 主版本号.次版本号.修订号
-- 示例：v1.2.3
-
-#### 8.2 注释要求
-- 每次修改必须添加修改说明
-- 记录修改日期和修改人
-- 说明修改原因和影响范围
+### 可维护性
+- 遵循代码审查清单
+- 执行单元测试
+- 定期代码评审
+- 统一的代码格式
+- 版本控制管理

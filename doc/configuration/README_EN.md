@@ -1,95 +1,141 @@
-# Configuration Guide
+# ⚙️ Configuration Guide
 
-[English](./README_EN.md) | [中文](./README_CN.md)
+<div align="center">
+<div style="margin: 20px 0; display: flex; justify-content: center; gap: 24px;">
+<a href="./README_EN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #0366d6, #044289); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+English
+</a>
+<a href="./README_CN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #28a745, #208637); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+中文
+</a>
+</div>
+</div>
 
-This directory contains all configuration-related documentation for the project.
+## 📋 Overview
 
-### Configuration Categories
-1. Environment Configuration
-   - Development Environment
-     * Codesys Installation Setup
-     * Compiler Settings
-     * Debug Tool Configuration
-   - Runtime Environment
-     * PLC Hardware Configuration
-     * Network Setup
-     * System Parameter Settings
+This document provides a comprehensive configuration guide for the PLC project, covering project basic configuration, communication settings, system optimization, and more. Through this guide, you can properly set up and optimize your PLC system to ensure stable and efficient operation.
 
-2. Project Configuration
-   - Task Configuration
-     * Cyclic Tasks
-     * Event Tasks
-     * Priority Settings
-   - Variable Configuration
-     * Global Variables
-     * Retain Variables
-     * Network Variables
-   - PLC Communication Setup
-     * Device-to-Device Communication
-     * IO Configuration
-     * Fieldbus Parameters
+### 🎯 Configuration Goals
+- Establish standardized project structure
+- Optimize system performance
+- Ensure communication reliability
+- Secure system safety
 
-3. Library Configuration
-   - Standard Libraries
-     * IEC Standard Libraries
-     * Codesys System Libraries
-   - Custom Libraries
-     * Project Libraries
-     * Third-party Libraries
+### 🔍 Quick Navigation
+1. First-time setup: [Project Configuration Guide](./project_config/README_EN.md)
+2. Communication setup: [Protocol Configuration](./protocol_config/README_EN.md)
+3. Performance tuning: [Performance Optimization Guide](./performance/README_EN.md)
+4. Security hardening: [Security Configuration Guide](./security/README_EN.md)
 
-### Configuration Template
-```markdown
-## Configuration Item: [Name]
+## 📑 Configuration Content
 
-### Basic Information
-- Configuration Type:
-- Scope:
-- Default Value:
-- Value Range:
+### 🔧 Basic Configuration
+- 📌 [Project Setup](./project_config.md)
+  - Directory Structure
+  - Library Management
+  - Compilation Options
+- 🎯 [Runtime Setup](./runtime_config.md)
+  - Task Configuration
+  - Memory Settings
+  - Boot Parameters
 
-### Description
-Detailed explanation of the configuration item's purpose and effects
+### 🌐 Communication Setup
+- 🔌 [Device Configuration](./device_config/README_EN.md)
+  - Field Bus Settings
+  - Network Parameters
+  - I/O Mapping
+  - Hardware Configuration
+  - Interface Settings
+- 📡 [Protocol Configuration](./protocol_config/README_EN.md)
+  - Modbus RTU/TCP
+  - OPC UA Settings
+  - Custom Protocols
+  - Protocol Conversion
+  - Data Mapping
 
-### Configuration Steps
-1. Step One
-2. Step Two
-3. Step Three
+### 📊 System Configuration
+- ⚡ [Performance Optimization](./performance/README_EN.md)
+  - Task Scheduling
+  - Memory Management
+  - Communication Optimization
+  - Resource Allocation
+  - Load Balancing
+- 🛡️ [Security Configuration](./security/README_EN.md)
+  - Access Control
+  - User Authentication
+  - Permission Management
+  - Encryption Settings
+  - Audit Logging
 
-### Configuration Example
-Specific configuration examples
+## 🛠️ Configuration Tools
 
-### Notes
-Important considerations during configuration
-```
+### 📊 Configuration Software
+- 🔧 PLC Programming Software
+  - IEC 61131-3 Standard Support
+  - Visual Configuration Interface
+  - Built-in Debugging Tools
+- 📡 Communication Configuration Tools
+  - Protocol Parameter Settings
+  - Communication Diagnostics
+  - Data Monitoring
+- 🔍 System Diagnostic Tools
+  - Performance Monitoring
+  - Fault Diagnostics
+  - Log Analysis
 
-### Configuration Management
-1. Version Control
-   - Configuration File Version Management
-   - Change Records
-   - Rollback Mechanism
+### 🔧 Configuration Methods
+- 📝 Text Configuration
+  - XML Configuration Files
+  - JSON Configuration Files
+  - INI Configuration Files
+- 🖥️ Graphical Configuration
+  - Project Tree View
+  - Parameter Tables
+  - Graphical Editor
+- 🔄 Online Configuration
+  - Runtime Parameter Adjustment
+  - Online Configuration Update
+  - Configuration Backup/Restore
 
-2. Security Control
-   - Permission Management
-   - Encryption Protection
-   - Backup Recovery
+## ⚠️ Important Notes
 
-3. Environment Isolation
-   - Development Environment
-   - Test Environment
-   - Production Environment
+### 🔒 Security Considerations
+- Backup configuration before changes
+- Authentication required for critical parameters
+- Regular configuration backups
+- Change logging
 
-### Best Practices
-1. Configuration Standards
-   - Naming Conventions
-   - Value Format Standards
-   - Comment Requirements
+### 📈 Performance Considerations
+- Proper scan cycle settings
+- Communication parameter optimization
+- Resource usage monitoring
+- Avoid redundant configuration
 
-2. Change Management
-   - Change Request
-   - Review Process
-   - Implementation Confirmation
+### 🔄 Compatibility Considerations
+- Check firmware version compatibility
+- Verify protocol version match
+- Confirm hardware compatibility
+- Test system integration
 
-3. Documentation Requirements
-   - Configuration Checklist
-   - Parameter Description
-   - Dependencies
+## 📋 Configuration Verification
+
+### ✅ Checklist
+1. Basic configuration completeness check
+2. Communication parameter validation
+3. Security settings compliance check
+4. Performance parameter assessment
+
+### 🔍 Testing & Validation
+- Functional Testing
+- Performance Testing
+- Security Testing
+- Stability Testing
+
+### 📊 Monitoring & Evaluation
+- System Performance Monitoring
+- Communication Quality Monitoring
+- Resource Usage Monitoring
+- Exception Monitoring
+
+---
+Last Updated: 2025-05-31

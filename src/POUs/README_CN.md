@@ -1,44 +1,65 @@
-# POUs (程序组织单元)
+# 🔨 程序组织单元 (POUs)
 
-[English](./README_EN.md) | [中文](./README_CN.md)
+<div align="center">
+<div style="margin: 20px 0; display: flex; justify-content: center; gap: 24px;">
+<a href="./README_EN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #0366d6, #044289); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+English
+</a>
+<a href="./README_CN.md" style="display: inline-block; width: 120px; padding: 12px 0; text-align: center; background: linear-gradient(145deg, #28a745, #208637); color: white; text-decoration: none; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s ease;">
+中文
+</a>
+</div>
+</div>
 
-本目录包含所有程序组织单元(Program Organization Units)。
+## 📑 目录说明
+本目录包含所有程序组织单元，包括程序、功能块和函数。
 
-### 目录结构
-- `01_Programs/`: 主程序
-  - 包含应用程序的主要逻辑
-  - 任务配置和程序调用
-  - 系统初始化程序
+## 📂 目录结构
+### 📊 程序组织
+- 🎯 `01_Programs/` - 主程序目录
+  - 🚀 系统初始化程序
+  - 🔄 主循环程序
+  - ⚡ 任务程序
   
-- `02_Functions/`: 全局函数
-  - 通用数学运算函数
-  - 数据处理函数
-  - 辅助功能函数
+### ⚙️ 功能模块
+- 🛠️ `02_Functions/` - 全局函数
+  - 📐 数学运算
+  - 🔍 数据处理
+  - 📊 数据转换
   
-- `03_Function_Blocks/`: 功能块
-  - 设备控制功能块
-  - 通信协议功能块
-  - 算法实现功能块
+- 🧩 `03_Function_Blocks/` - 功能块
+  - 🎮 设备控制
+  - 🌐 通信协议
+  - 📈 算法实现
 
-- `04_ProcessUnits/`: 工艺单元
-  - 温度控制单元
-  - 流量控制单元
-  - 压力控制单元
-  - 液位控制单元
-  - 批次处理单元
+### 🏭 工艺单元
+- `04_ProcessUnits/` - 工艺组件
+  - 🌡️ 温度控制
+  - 💧 流量控制
+  - 📊 压力控制
+  - 📈 液位控制
+  - 🔄 批次处理
 
-### 开发规范
-1. 命名规范
-   - 程序名: PROG_*
-   - 函数名: F_*
-   - 功能块: FB_*
+## 📝 开发规范
 
-2. 文档要求
-   - 每个POU必须包含功能说明
-   - 输入输出参数必须注明单位和范围
-   - 重要算法必须有流程说明
+### 📌 命名规则
+- 程序: `PROG_[功能名称]`
+- 功能块: `FB_[类型]_[功能名称]`
+- 函数: `F_[功能名称]`
 
-3. 代码组织
-   - 相关功能应该放在同一目录下
-   - 通用功能应放在Functions目录
-   - 可重用组件应放在FBs目录
+### 📚 文档要求
+每个POU必须包含：
+- 📋 功能描述
+- 📊 参数说明
+- 📈 调用示例
+
+### 🔍 代码审查清单
+- ✅ 变量命名规范
+- 🔍 错误处理完整
+- 📊 注释完整清晰
+- 🎯 功能测试通过
+
+## 🔗 相关链接
+- 📖 [编程指南](../doc/programming_guide.md)
+- 🎓 [最佳实践](../doc/best_practices.md)
+- 🛠️ [故障排除](../doc/troubleshooting.md)

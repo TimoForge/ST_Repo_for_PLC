@@ -1,44 +1,58 @@
-# POUs (Program Organization Units)
+# 🔨 Program Organization Units (POUs)
 
+<div align="center>
 [English](./README_EN.md) | [中文](./README_CN.md)
+</div>
 
-This directory contains all Program Organization Units.
+## 📑 Directory Description
+This directory contains all Program Organization Units including programs, function blocks and functions.
 
-### Directory Structure
-- `01_Programs/`: Main Programs
-  - Contains main application logic
-  - Task configuration and program calls
-  - System initialization programs
+## 📂 Directory Structure
+### 📊 Program Organization
+- 🎯 `01_Programs/` - Main Programs
+  - 🚀 System Initialization
+  - 🔄 Main Cycle
+  - ⚡ Tasks
+
+### ⚙️ Function Modules
+- 🛠️ `02_Functions/` - Global Functions
+  - 📐 Mathematical Operations
+  - 🔍 Data Processing
+  - 📊 Data Conversion
   
-- `02_Functions/`: Global Functions
-  - Common mathematical functions
-  - Data processing functions
-  - Utility functions
-  
-- `03_Function_Blocks/`: Function Blocks
-  - Device control function blocks
-  - Communication protocol function blocks
-  - Algorithm implementation blocks
+- 🧩 `03_Function_Blocks/` - Function Blocks
+  - 🎮 Device Control
+  - 🌐 Communication Protocols
+  - 📈 Algorithm Implementation
 
-- `04_ProcessUnits/`: Process Units
-  - Temperature control units
-  - Flow control units
-  - Pressure control units
-  - Level control units
-  - Batch processing units
+### 🏭 Process Units
+- `04_ProcessUnits/` - Process Components
+  - 🌡️ Temperature Control
+  - 💧 Flow Control
+  - 📊 Pressure Control
+  - 📈 Level Control
+  - 🔄 Batch Processing
 
-### Development Guidelines
-1. Naming Conventions
-   - Programs: PROG_*
-   - Functions: F_*
-   - Function Blocks: FB_*
+## 📝 Development Standards
 
-2. Documentation Requirements
-   - Each POU must include functionality description
-   - Input/output parameters must specify units and ranges
-   - Critical algorithms must include flow descriptions
+### 📌 Naming Conventions
+- Programs: `PROG_[FunctionName]`
+- Function Blocks: `FB_[Type]_[FunctionName]`
+- Functions: `F_[FunctionName]`
 
-3. Code Organization
-   - Related functionality should be grouped in the same directory
-   - Common utilities should be placed in Functions directory
-   - Reusable components should be placed in FBs directory
+### 📚 Documentation Requirements
+Each POU must include:
+- 📋 Functionality Description
+- 📊 Parameter Specifications
+- 📈 Usage Examples
+
+### 🔍 Code Review Checklist
+- ✅ Variable Naming Convention
+- 🔍 Error Handling Complete
+- 📊 Comments Complete and Clear
+- 🎯 Function Tests Passed
+
+## 🔗 Related Links
+- 📖 [Programming Guide](../doc/programming_guide.md)
+- 🎓 [Best Practices](../doc/best_practices.md)
+- 🛠️ [Troubleshooting](../doc/troubleshooting.md)

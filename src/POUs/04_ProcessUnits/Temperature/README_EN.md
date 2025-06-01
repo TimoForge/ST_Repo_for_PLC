@@ -1,28 +1,39 @@
-# Temperature Control Unit
+# 🌡️ Temperature Control Unit
 
-This directory contains temperature control POUs, strictly following PO_ prefix naming convention.
+<div align="center">
+<!-- ...language switcher... -->
+</div>
 
-## PO_ Prefix Usage
+## 📑 Description
+This directory contains temperature control related function blocks and programs.
 
-### Temperature Programs
-- PO_TempControl: Main control program
-- PO_TempSequence: Temperature sequence control
-- PO_TempMonitor: Temperature monitoring
+## 📂 Components
+### 🎯 Basic Control
+- 🔥 `PO_TEMP_FB_PID` - Temperature PID Controller
+- 📈 `PO_TEMP_FB_Ramp` - Temperature Ramp Control
+- 🔄 `PO_TEMP_FB_Cascade` - Temperature Cascade Control
 
-### Temperature Function Blocks
-- PO_FB_TempPID: PID control function block
-- PO_FB_TempLimit: Temperature limit function block
-- PO_FB_TempAlarm: Temperature alarm function block
+### 📊 Data Processing
+- 🔍 `PO_TEMP_FB_Filter` - Temperature Signal Filter
+- 📊 `PO_TEMP_PROG_Stats` - Temperature Statistics
+- ⚡ `PO_TEMP_FB_Alarm` - Temperature Alarm Handler
 
-### Temperature Functions
-- PO_F_TempConvert: Temperature unit conversion
-- PO_F_TempCompensate: Temperature compensation
-- PO_F_TempValidate: Temperature validation
+### ⚙️ Extensions
+- 🎛️ `PO_TEMP_FB_MultiZone` - Multi-zone Temperature Control
+- 🔄 `PO_TEMP_FUN_Comp` - Temperature Compensation Function
+- 📈 `PO_TEMP_PROG_Optimize` - Temperature Optimization Program
 
-## Development Standards
+## 🛠️ Usage
+1. Basic PID Control Example
+```st
+VAR
+    fbTempPID: FB_TempPID;
+END_VAR
+```
 
-1. All temperature POUs must use PO_ prefix
-2. Names should clearly indicate temperature control function
-3. Maintain consistent naming style
-4. Provide complete interface documentation
-5. Include detailed parameter specifications
+2. Multi-zone Control Example
+```st
+VAR
+    fbMultiZone: FB_MultiZoneTemp;
+END_VAR
+```

@@ -1,23 +1,30 @@
-# 程序 (Programs)
+# 📊 主程序 (Programs)
 
-本目录(01_Programs)包含PLC项目中的程序(Program)类型的程序组织单元(POUs)。
+<div align="center">
+<!-- ...language switcher... -->
+</div>
 
-## 用途
+## 📑 目录说明
+本目录包含PLC项目的主程序文件。
 
-在IEC 61131-3标准中，程序(Program)是最高级别的POU，具有以下特点：
-- 可以访问I/O变量和全局变量
-- 可以调用功能块(Function Blocks)和函数(Functions)
-- 通常包含主要的控制逻辑和程序流程
-- 程序实例在PLC任务中被调用执行
+## 🔨 程序类型
+### 🚀 系统程序
+- 📌 `PROG_Init` - 系统初始化
+- 🔄 `PROG_Cycle` - 主循环程序
+- ⚡ `PROG_Fast` - 快速任务程序
 
-## 命名规范
+### 🏭 工艺程序
+- 🌡️ `PROG_TempControl` - 温度控制
+- 💧 `PROG_FlowControl` - 流量控制
+- 📊 `PROG_BatchProcess` - 批次处理
 
-程序命名应遵循以下规范：
-- 使用前缀"P_"表示这是一个程序
-- 名称应清晰表达程序的功能或用途
-- 使用驼峰命名法
+### 🛠️ 功能程序
+- 📝 `PROG_DataLog` - 数据记录
+- 🔔 `PROG_Alarm` - 报警处理
+- 🔒 `PROG_Security` - 安全管理
 
-示例：
-- P_MainControl
-- P_SafetyMonitor
-- P_StartupSequence
+## ⚙️ 开发规范
+- 📝 命名规则：`PROG_[功能名称]`
+- 🔍 必须包含任务配置说明
+- 📊 需要注明执行周期
+- ✅ 包含完整的注释

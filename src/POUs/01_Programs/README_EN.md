@@ -1,23 +1,30 @@
-# Programs
+# 📊 Programs
 
-This directory (01_Programs) contains Program-type Program Organization Units (POUs) in the PLC project.
+<div align="center>
+<!-- ...language switcher... -->
+</div>
 
-## Purpose
+## 📑 Directory Description
+This directory contains the main program files for the PLC project.
 
-In the IEC 61131-3 standard, Programs are the highest-level POUs with the following characteristics:
-- Can access I/O variables and global variables
-- Can call Function Blocks and Functions
-- Typically contain main control logic and program flow
-- Program instances are called and executed in PLC tasks
+## 🔨 Program Types
+### 🚀 System Programs
+- 📌 `PROG_Init` - System Initialization
+- 🔄 `PROG_Cycle` - Main Cycle Program
+- ⚡ `PROG_Fast` - Fast Task Program
 
-## Naming Convention
+### 🏭 Process Programs
+- 🌡️ `PROG_TempControl` - Temperature Control
+- 💧 `PROG_FlowControl` - Flow Control
+- 📊 `PROG_BatchProcess` - Batch Processing
 
-Programs should follow these naming conventions:
-- Use prefix "P_" to indicate it's a Program
-- Name should clearly express the program's functionality or purpose
-- Use CamelCase naming convention
+### 🛠️ Utility Programs
+- 📝 `PROG_DataLog` - Data Logging
+- 🔔 `PROG_Alarm` - Alarm Handling
+- 🔒 `PROG_Security` - Security Management
 
-Examples:
-- P_MainControl
-- P_SafetyMonitor
-- P_StartupSequence
+## ⚙️ Development Standards
+- 📝 Naming Rule: `PROG_[FunctionName]`
+- 🔍 Must include task configuration
+- 📊 Execution cycle must be specified
+- ✅ Complete documentation required

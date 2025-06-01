@@ -1,32 +1,34 @@
-# DUTs (Data Unit Types)
+# 📝 Data Unit Types (DUTs)
 
-[English](./README_EN.md) | [中文](./README_CN.md)
+<div align="center>
+English | 中文
+</div>
 
-This directory contains all custom data type definitions.
+## 📑 Directory Description
+This directory contains all custom data type definitions for PLC program data structuring.
 
-### Directory Structure
-- `Structs/`: Structure Definitions
-  - Device configuration structures
-  - Data buffer structures
-  - Communication protocol structures
-  
-- `Enums/`: Enumeration Definitions
-  - Status enumerations
-  - Error code enumerations
-  - Mode selection enumerations
+## 📊 Type Categories
+### 🔰 Basic Types
+- 📦 `BASE/` - Basic Data Types
+  - 🔢 Numeric Extensions
+  - 📅 Date Time Types
+  - 🔤 String Extensions
 
-### Development Guidelines
-1. Naming Conventions
-   - Structures: ST_*
-   - Enumerations: E_*
-   - Subtypes: T_*
+### 🏭 Process Types
+- 🎛️ `PROCESS/` - Process Types
+  - 🌡️ Temperature Control
+  - 💧 Flow Control
+  - 📊 Pressure Control
+  - 📈 Level Control
 
-2. Documentation Requirements
-   - Each type must have clear purpose description
-   - Structure members must be thoroughly commented
-   - Enumeration values must be explained
+### 🔧 Device Types
+- ⚙️ `DEVICE/` - Device Types
+  - 🚥 Valve Status
+  - 📱 HMI Interface
+  - 🔌 Inverter Data
 
-3. Design Principles
-   - Structures should have single responsibility
-   - Avoid deep nesting
-   - Consider data alignment and memory usage
+## ⚙️ Development Standards
+- 📌 Type Naming: `ST_[Category]_[Name]`
+- 📋 Complete Comments Required
+- 🔍 Value Range Specification
+- ✅ IEC61131-3 Compliance
